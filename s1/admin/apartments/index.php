@@ -22,7 +22,7 @@ $asset->addString("<script type='module' src='/local/templates/main/assets/admin
         <th>Статус</th>
         <th>Стоимость</th>
         <th>Стоимость со скидкой</th>
-        <th>
+        <th class="text-end">
             <button class="btn btn-outline-secondary btn-sm" @click.prevent="createApartment">Create</button>
         </th>
     </tr>
@@ -36,7 +36,7 @@ $asset->addString("<script type='module' src='/local/templates/main/assets/admin
         <td v-text="item.status ? 'В продаже' : 'Не в продаже'"></td>
         <td v-text="item.price"></td>
         <td v-text="item.price_discount"></td>
-        <td>
+        <td class="text-end">
             <div class="btn-group btn-group-sm">
                 <button class="btn btn-outline-secondary" @click.prevent="editApartment(item.id)">Edit</button>
                 <button class="btn btn-outline-secondary" @click.prevent="deleteApartment(item.id)">Delete</button>
